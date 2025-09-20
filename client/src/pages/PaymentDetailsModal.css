@@ -1,0 +1,70 @@
+/* src/pages/PaymentDetailsModal.css */
+/* Re-using modal styles from CreateGroupModal.css */
+@import './CreateGroupModal.css';
+
+.modal-content.payment-details {
+  max-width: 450px;
+}
+
+.summary {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.summary p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.payment-list {
+  list-style: none;
+  padding: 0;
+}
+
+.payment-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.payment-list li.paid {
+  background-color: rgba(40, 167, 69, 0.3); /* Green tint */
+  border: 1px solid rgba(40, 167, 69, 0.7);
+}
+
+.payment-list li.unpaid {
+  background-color: rgba(220, 53, 69, 0.2); /* Red tint */
+  border: 1px solid rgba(220, 53, 69, 0.5);
+}
+
+.member-name {
+  font-weight: 500;
+}
+
+.status-button {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-close {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #6c757d;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}

@@ -1,0 +1,59 @@
+/* src/App.css */
+
+/* The main container that holds everything */
+.app-container {
+  width: 100%;
+  height: 100vh; /* vh stands for viewport height */
+  position: relative; /* This is key for positioning the video inside it */
+  overflow: hidden; /* Hides any part of the video that might overflow */
+  text-align: center;
+}
+
+/* The video element itself */
+.background-video {
+  position: absolute; /* Takes the video out of the normal document flow */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the entire container, cropping if needed */
+  z-index: -1; /* This is the most important part! It pushes the video BEHIND other content */
+}
+
+/* The content to be displayed on top */
+.content {
+  position: relative; /* Keeps the content in the normal flow */
+  z-index: 1; /* Ensures content is in front of the video */
+  color: white; /* Make text visible against a potentially dark video */
+  
+  /* Some extra styling to center the content nicely */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Optional: Add a dark overlay for better text readability */
+.app-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+  z-index: 0; /* Places the overlay between the video (-1) and the content (1) */
+}
+/* 
+h1{
+  color:white;
+  text-align:center;
+  position:relative;
+  z-index: 2;
+} */
+
+.white-center{
+  color:black;
+  text-align:center;
+}

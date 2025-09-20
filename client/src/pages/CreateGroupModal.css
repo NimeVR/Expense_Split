@@ -1,0 +1,131 @@
+
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal-content {
+  background: rgba(40, 40, 60, 0.85);
+  padding: 1.5rem 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: white;
+  width: 100%;
+  max-width: 500px;
+  
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  /* Make the form take up all the space inside the modal-content */
+  flex-grow: 1; 
+  overflow: hidden; /* Prevent the form itself from scrolling */
+}
+
+.modal-content h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  /* This prevents the header from shrinking */
+  flex-shrink: 0; 
+}
+
+/* This is our scrollable area */
+.form-body {
+  /* This tells the body to take up all available space */
+  flex-grow: 1; 
+  /* The most important part: add a vertical scrollbar when needed */
+  overflow-y: auto;
+  /* Add some padding to prevent scrollbar from touching content */
+  padding: 0.5rem 1rem 0.5rem 0;
+}
+
+.modal-content .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.modal-content .form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.modal-content .form-group input,
+.modal-content .form-group textarea {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.member-input-group {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.add-member-button {
+  background: none;
+  border: 1px dashed rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0.6rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 0.5rem;
+}
+
+.add-member-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem; /* Add some space above the buttons */
+  border-top: 1px solid rgba(255, 255, 255, 0.2); /* A nice separator line */
+  /* This prevents the footer from shrinking */
+  flex-shrink: 0; 
+}
+
+.modal-actions button {
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-cancel {
+  background-color: #6c757d;
+  color: white;
+}
+
+.button-create {
+  background-color: #007bff;
+  color: white;
+}

@@ -1,0 +1,158 @@
+/* src/pages/GroupCard.css */
+
+.group-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1.5rem;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 0.5rem;
+}
+
+.group-card h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.paid-tag {
+  background-color: #00bfff;
+  color: #0d2c3c;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.group-description {
+  color: rgba(255, 255, 255, 0.9);
+  min-height: 40px;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.members-section {
+  flex-grow: 1;
+}
+
+.members-section h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.members-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.members-section li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.amount-due {
+  font-weight: bold;
+  color: #a7d8ff;
+}
+
+.progress-section {
+  margin-top: 1.5rem;
+}
+
+.progress-track {
+  width: 100%;
+  height: 8px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: white;
+  border-radius: 4px;
+  position: relative;
+  transition: width 0.5s ease-in-out;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(50%, -50%);
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.progress-text {
+  display: block;
+  text-align: right;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 0.5rem;
+}
+
+/* --- STYLES FOR THE ACTION BUTTONS --- */
+
+.card-actions {
+  display: flex;
+  gap: 1rem; /* Space between the two buttons */
+  margin-top: 1.5rem;
+}
+
+/* Base styles that BOTH buttons will share for perfect consistency */
+.delete-button,
+.view-details-button {
+  width: 50%; /* Make each button take up half the space */
+  padding: 0.7rem;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 1px solid;
+  background-color: transparent;
+  text-align: center;
+}
+
+/* Specific styles for the View Details button */
+.view-details-button {
+  border-color: #007bff;
+  color: #89caff;
+}
+
+.view-details-button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Specific styles for the new Delete button */
+.delete-button {
+  border-color: #dc3545; /* Red border */
+  color: #ff8a96; /* Lighter red text */
+}
+
+.delete-button:hover {
+  background-color: #dc3545; /* Fill with red on hover */
+  color: white;
+}
